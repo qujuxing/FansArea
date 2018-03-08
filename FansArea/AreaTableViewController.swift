@@ -71,6 +71,38 @@ class AreaTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let actionShare = UITableViewRowAction(style: .normal, title: "分享") { (_, indexPath) in
+            let actionSheet = UIAlertController(title: "分享", message: nil, preferredStyle: .actionSheet)
+            let option1 = UIAlertAction(title: "QQ", style: .default, handler: nil)
+            let option2 = UIAlertAction(title: "微信", style: .default, handler: nil)
+            let optionCancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+            actionSheet.addAction(option1)
+            actionSheet.addAction(option2)
+            actionSheet.addAction(optionCancel)
+            
+            self.present(actionSheet, animated: true, completion: nil)
+        }
+        actionShare.backgroundColor = UIColor.orange
+        
+        let actionDel = UITableViewRowAction(style: .destructive, title: "删除") { (_, indexPath) in
+            self.areaImages.remove(at: indexPath.row)
+            self.areas.remove(at: indexPath.row)
+            self.provinces.remove(at: indexPath.row)
+            self.parts.remove(at: indexPath.row)
+            self.visited.remove(at: indexPath.row)
+            
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        
+        let actionTop = UITableViewRowAction(style: .default, title: "置顶") { (_, _) in
+            
+        }
+        actionTop.backgroundColor = UIColor(red: 245/255, green: 199/255, blue: 221/255, alpha: 1)
+        
+        return [actionShare,actionDel,actionTop]
+    }
+    
     // MARK: - Table view data source
 
 
@@ -104,17 +136,18 @@ class AreaTableViewController: UITableViewController {
     }
     */
 
-    /*
+   
     // Override to support editing the table view.
+   /*
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
+          
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+  */
+    
 
     /*
     // Override to support rearranging the table view.
