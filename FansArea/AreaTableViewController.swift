@@ -13,27 +13,33 @@ class AreaTableViewController: UITableViewController {
     
     
     var areas = [
-        "闵行区莘庄镇","兰州七里河区","三明市尤溪县","西宁城西区","广州白云区","闽侯县上街镇","哈尔滨市南岗区","临汾市尧都区","成都武侯区","汕头市金平区","长沙市芙蓉区"
+        Area(name: "闵行区莘庄镇莘凌路285弄绿梅二邨113", province: "上海", part: "华东", image: "xinzhuang", isVisited: false) ,
+        Area(name: "兰州七里河区彭家坪路36号龚家湾", province: "甘肃", part: "西北", image: "qilihe", isVisited: false) ,
+        Area(name: "三明市尤溪县西城镇溪树头小区2栋504", province: "福建", part: "东南", image: "youxi", isVisited: false) ,
+        Area(name: "西宁城西区海湖新区文成路16号", province: "青海", part: "西北", image: "chengxi", isVisited: false) ,
+        Area(name: "广州白云区机场路3-9号怡乐商业大厦", province: "广东", part: "华南", image: "baiyun", isVisited: false) ,
+        Area(name: "闽侯县上街镇新峰阳光理想城香草天空", province: "福建", part: "东南", image: "shangjie", isVisited: false) ,
+        Area(name: "哈尔滨市南岗区王岗镇哈尔滨大街855号中海雍景熙岸6A栋", province: "黑龙江", part: "东北", image: "nangang", isVisited: false) ,
+        Area(name: "临汾市尧都区体育南街92号", province: "山西", part: "华北", image: "yaodu", isVisited: false) ,
+        Area(name: "成都武侯区玉林南路15号", province: "四川", part: "西南", image: "wuhou", isVisited: false) ,
+        Area(name: "汕头市金平区蓬洲学校路15号", province: "广东", part: "华南", image: "jinping", isVisited: false) ,
+        Area(name: "长沙市芙蓉区马王堆万家丽大道北段569号", province: "湖南", part: "华中", image: "furong", isVisited: false)
     ]
-    var areaImages = [ "xinzhuang","qilihe","youxi","chengxi","baiyun","shangjie","nangang","yaodu","wuhou","jinping","furong"
-    ]
-    var provinces = [
-    "上海","甘肃","福建","青海","广东","福建","黑龙江","山西","四川","广东","湖南"
-    ]
-    var parts = [
-    "华东","西北","东南","西北","华南","东南","东北","华北","西南","华南","华中"
-    ]
-
-    var visited = [Bool](repeatElement(false, count: 11))
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableViewAutomaticDimension
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -90,12 +96,7 @@ class AreaTableViewController: UITableViewController {
         actionShare.backgroundColor = UIColor.orange
         
         let actionDel = UITableViewRowAction(style: .destructive, title: "删除") { (_, indexPath) in
-            self.areaImages.remove(at: indexPath.row)
             self.areas.remove(at: indexPath.row)
-            self.provinces.remove(at: indexPath.row)
-            self.parts.remove(at: indexPath.row)
-            self.visited.remove(at: indexPath.row)
-            
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
         
@@ -120,13 +121,13 @@ class AreaTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
 
-        cell.nameLabel.text = areas[indexPath.row]
-        cell.provinceLabel.text = provinces[indexPath.row]
-        cell.partLabel.text = parts[indexPath.row]
-        cell.thumbImageView.image = UIImage(named: areaImages[indexPath.row])
+        cell.nameLabel.text = areas[indexPath.row].name
+        cell.provinceLabel.text = areas[indexPath.row].province
+        cell.partLabel.text = areas[indexPath.row].part
+        cell.thumbImageView.image = UIImage(named: areas[indexPath.row].image)
         cell.thumbImageView.layer.cornerRadius = 10
         
-        cell.accessoryType = visited[indexPath.row] ? .checkmark : .none
+//        cell.accessoryType = areas[indexPath.row] ? .checkmark : .none
 
         return cell
     }
@@ -174,8 +175,8 @@ class AreaTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showAreaDetail" {
-            let dest = segue.destination as! AreaDetailViewController
-            dest.areaName = areaImages[tableView.indexPathForSelectedRow!.row]
+            let dest = segue.destination as! DetailTableViewController
+            dest.area = areas[tableView.indexPathForSelectedRow!.row]
         }
     }
     
