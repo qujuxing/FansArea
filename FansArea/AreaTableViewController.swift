@@ -42,6 +42,8 @@ class AreaTableViewController: UITableViewController {
     }
     
     //MARK:  - Table View delegate
+    
+    /*
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let menu = UIAlertController(title: "朋友你好", message: "您选择了第\(indexPath.row)行", preferredStyle: .actionSheet)
         
@@ -70,6 +72,8 @@ class AreaTableViewController: UITableViewController {
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    */
+    
 
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let actionShare = UITableViewRowAction(style: .normal, title: "分享") { (_, indexPath) in
@@ -164,14 +168,16 @@ class AreaTableViewController: UITableViewController {
     }
     */
 
-    /*
+   
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showAreaDetail" {
+            let dest = segue.destination as! AreaDetailViewController
+            dest.areaName = areaImages[tableView.indexPathForSelectedRow!.row]
+        }
     }
-    */
+    
 
 }

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="klM-FQ-fJj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rLP-Xd-LbI">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -15,7 +16,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Area Table View Controller-->
+        <!--粉丝区域-->
         <scene sceneID="JQA-HI-9rX">
             <objects>
                 <tableViewController id="klM-FQ-fJj" customClass="AreaTableViewController" customModule="FansArea" customModuleProvider="target" sceneMemberID="viewController">
@@ -63,6 +64,7 @@
                                     <outlet property="partLabel" destination="4Jv-mR-Yno" id="ERh-V8-dAn"/>
                                     <outlet property="provinceLabel" destination="KgA-TX-Fns" id="aZ3-yp-1CT"/>
                                     <outlet property="thumbImageView" destination="119-cW-4SE" id="LnU-va-A3R"/>
+                                    <segue destination="RK8-eM-Wee" kind="show" identifier="showAreaDetail" id="av4-PQ-zjA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -71,10 +73,58 @@
                             <outlet property="delegate" destination="klM-FQ-fJj" id="7LI-3O-74q"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="粉丝区域" id="wFt-Fr-0ch"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRo-ua-1vp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1125.5999999999999" y="547.37631184407803"/>
+            <point key="canvasLocation" x="1468" y="546.79802955665025"/>
+        </scene>
+        <!--Area Detail View Controller-->
+        <scene sceneID="LfM-O1-PLI">
+            <objects>
+                <viewController id="RK8-eM-Wee" customClass="AreaDetailViewController" customModule="FansArea" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lxe-mn-Bd8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q3c-Ry-wBK">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="q3c-Ry-wBK" firstAttribute="top" secondItem="sBf-Em-wnA" secondAttribute="top" id="9ak-tH-HYz"/>
+                            <constraint firstItem="sBf-Em-wnA" firstAttribute="bottom" secondItem="q3c-Ry-wBK" secondAttribute="bottom" id="EBM-qB-N30"/>
+                            <constraint firstItem="q3c-Ry-wBK" firstAttribute="leading" secondItem="sBf-Em-wnA" secondAttribute="leading" id="KAl-QV-0HN"/>
+                            <constraint firstItem="sBf-Em-wnA" firstAttribute="trailing" secondItem="q3c-Ry-wBK" secondAttribute="trailing" id="ydz-6M-Vwn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sBf-Em-wnA"/>
+                    </view>
+                    <connections>
+                        <outlet property="areaImageView" destination="q3c-Ry-wBK" id="B5h-Qn-KRA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0z4-XF-sGS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2393" y="547"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6To-pw-0zQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rLP-Xd-LbI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MtZ-c4-2tS">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="klM-FQ-fJj" kind="relationship" relationship="rootViewController" id="sxt-x1-fRd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5RI-HS-che" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="594" y="547"/>
         </scene>
     </scenes>
 </document>

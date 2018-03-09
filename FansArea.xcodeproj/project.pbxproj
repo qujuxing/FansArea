@@ -13,6 +13,7 @@
 		AE58F3EE2051332F00AA0EDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE58F3EC2051332F00AA0EDA /* LaunchScreen.storyboard */; };
 		AE58F3F62051366600AA0EDA /* AreaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE58F3F52051366600AA0EDA /* AreaTableViewController.swift */; };
 		AE58F3F820516F8600AA0EDA /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE58F3F720516F8600AA0EDA /* CustomTableViewCell.swift */; };
+		AE58F3FC2052412000AA0EDA /* AreaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE58F3FB2052412000AA0EDA /* AreaDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AE58F3EF2051332F00AA0EDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE58F3F52051366600AA0EDA /* AreaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaTableViewController.swift; sourceTree = "<group>"; };
 		AE58F3F720516F8600AA0EDA /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		AE58F3FB2052412000AA0EDA /* AreaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				AE58F3E32051332F00AA0EDA /* AppDelegate.swift */,
 				AE58F3F52051366600AA0EDA /* AreaTableViewController.swift */,
 				AE58F3F720516F8600AA0EDA /* CustomTableViewCell.swift */,
+				AE58F3FB2052412000AA0EDA /* AreaDetailViewController.swift */,
 				AE58F3E72051332F00AA0EDA /* Main.storyboard */,
 				AE58F3EA2051332F00AA0EDA /* Assets.xcassets */,
 				AE58F3EC2051332F00AA0EDA /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE58F3FC2052412000AA0EDA /* AreaDetailViewController.swift in Sources */,
 				AE58F3F820516F8600AA0EDA /* CustomTableViewCell.swift in Sources */,
 				AE58F3F62051366600AA0EDA /* AreaTableViewController.swift in Sources */,
 				AE58F3E42051332F00AA0EDA /* AppDelegate.swift in Sources */,
