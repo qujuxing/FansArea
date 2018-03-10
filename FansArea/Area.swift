@@ -12,6 +12,16 @@ struct Area {
     var part : String
     var image : String
     var isVisited : Bool
+    var rating = ""
+    
+    
+    init(name: String, province: String, part: String, image: String, isVisited: Bool) {
+        self.name = name
+        self.province = province
+        self.part = part
+        self.image = image
+        self.isVisited = isVisited
+    }
 }
 
 

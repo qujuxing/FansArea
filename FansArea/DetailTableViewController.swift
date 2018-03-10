@@ -11,6 +11,7 @@ import UIKit
 class DetailTableViewController: UITableViewController {
     @IBOutlet weak var largeImageView: UIImageView!
     
+    @IBOutlet weak var ratingBtn: UIButton!
     var area : Area!
     
     override func viewDidLoad() {
@@ -123,5 +124,13 @@ class DetailTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+   @IBAction func close(segue: UIStoryboardSegue)  {
+        let reviewVC = segue.source as! ReviewViewController
+    if let rating = reviewVC.rating {
+        self.area.rating = rating
+        self.ratingBtn.setImage(UIImage(named: rating), for: .normal)
+    }
+    }
 
 }
