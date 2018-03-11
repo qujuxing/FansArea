@@ -16,6 +16,8 @@
 		AE58F3FE20525CEC00AA0EDA /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE58F3FD20525CEC00AA0EDA /* Area.swift */; };
 		AE58F4002052660500AA0EDA /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE58F3FF2052660500AA0EDA /* DetailTableViewController.swift */; };
 		AE58F402205269DB00AA0EDA /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE58F401205269DB00AA0EDA /* DetailTableViewCell.swift */; };
+		AE73EDF62054E4B200E11B82 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE73EDF52054E4B200E11B82 /* MapKit.framework */; };
+		AE73EDF82055702200E11B82 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73EDF72055702200E11B82 /* MapViewController.swift */; };
 		AEBA47DB2054459D00E28BD8 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA47DA2054459D00E28BD8 /* ReviewViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		AE58F3FD20525CEC00AA0EDA /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 		AE58F3FF2052660500AA0EDA /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		AE58F401205269DB00AA0EDA /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		AE73EDF52054E4B200E11B82 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AE73EDF72055702200E11B82 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AEBA47DA2054459D00E28BD8 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE73EDF62054E4B200E11B82 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +55,7 @@
 			children = (
 				AE58F3E22051332E00AA0EDA /* FansArea */,
 				AE58F3E12051332E00AA0EDA /* Products */,
+				AE73EDF42054E4B200E11B82 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +74,7 @@
 				AE58F3F52051366600AA0EDA /* AreaTableViewController.swift */,
 				AE58F3F720516F8600AA0EDA /* CustomTableViewCell.swift */,
 				AEBA47DA2054459D00E28BD8 /* ReviewViewController.swift */,
+				AE73EDF72055702200E11B82 /* MapViewController.swift */,
 				AE58F3FD20525CEC00AA0EDA /* Area.swift */,
 				AE58F3FF2052660500AA0EDA /* DetailTableViewController.swift */,
 				AE58F401205269DB00AA0EDA /* DetailTableViewCell.swift */,
@@ -77,6 +84,14 @@
 				AE58F3EF2051332F00AA0EDA /* Info.plist */,
 			);
 			path = FansArea;
+			sourceTree = "<group>";
+		};
+		AE73EDF42054E4B200E11B82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE73EDF52054E4B200E11B82 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +127,11 @@
 					AE58F3DF2051332E00AA0EDA = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -158,6 +178,7 @@
 				AE58F3F820516F8600AA0EDA /* CustomTableViewCell.swift in Sources */,
 				AE58F3F62051366600AA0EDA /* AreaTableViewController.swift in Sources */,
 				AE58F3E42051332F00AA0EDA /* AppDelegate.swift in Sources */,
+				AE73EDF82055702200E11B82 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

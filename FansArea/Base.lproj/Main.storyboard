@@ -127,11 +127,31 @@
                                         <segue destination="J66-TE-Q5d" kind="presentation" identifier="showReview" id="tye-G8-76A"/>
                                     </connections>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fa8-eq-77o">
+                                    <rect key="frame" x="325" y="58" width="40" height="40"/>
+                                    <color key="backgroundColor" red="0.98823529409999999" green="0.30980392159999998" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="8FY-eS-7Pn"/>
+                                        <constraint firstAttribute="width" constant="40" id="Ybu-LO-Pce"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" image="map"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <segue destination="vj3-jP-nlD" kind="show" identifier="showMap" id="95m-EX-KZJ"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="tBv-Ay-9qo" secondAttribute="trailing" constant="10" id="4QF-XN-jDF"/>
                                 <constraint firstItem="tBv-Ay-9qo" firstAttribute="top" secondItem="e8T-sH-K7w" secondAttribute="top" constant="10" id="N9R-aZ-243"/>
+                                <constraint firstItem="fa8-eq-77o" firstAttribute="top" secondItem="tBv-Ay-9qo" secondAttribute="bottom" constant="8" symbolic="YES" id="sT1-63-Yni"/>
+                                <constraint firstItem="fa8-eq-77o" firstAttribute="leading" secondItem="tBv-Ay-9qo" secondAttribute="leading" id="zHu-u9-sLX"/>
                             </constraints>
                         </view>
                         <prototypes>
@@ -190,6 +210,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gMq-An-QDf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2559" y="547"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="OEE-yh-H2R">
+            <objects>
+                <viewController id="vj3-jP-nlD" customClass="MapViewController" customModule="FansArea" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vtc-h0-hGY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Hy5-5S-UF5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vj3-jP-nlD" id="GB7-Xi-Bdp"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hy5-5S-UF5" firstAttribute="leading" secondItem="Vtc-h0-hGY" secondAttribute="leading" id="N7I-jr-Zbh"/>
+                            <constraint firstItem="Hy5-5S-UF5" firstAttribute="centerY" secondItem="Vtc-h0-hGY" secondAttribute="centerY" id="md4-I2-ISW"/>
+                            <constraint firstItem="Hy5-5S-UF5" firstAttribute="centerX" secondItem="Vtc-h0-hGY" secondAttribute="centerX" id="vXb-0A-owv"/>
+                            <constraint firstItem="Hy5-5S-UF5" firstAttribute="top" secondItem="Xe1-2b-aCj" secondAttribute="top" id="vqr-oy-IM7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xe1-2b-aCj"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Hy5-5S-UF5" id="vSw-JO-c6m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kkg-gJ-FvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2557.5999999999999" y="1315.2709359605913"/>
         </scene>
         <!--Review View Controller-->
         <scene sceneID="wek-Hs-Xs1">
@@ -341,6 +393,7 @@
         <image name="dislike" width="85" height="85"/>
         <image name="good" width="85" height="85"/>
         <image name="great" width="85" height="85"/>
+        <image name="map" width="42" height="42"/>
         <image name="rating" width="85" height="85"/>
     </resources>
 </document>

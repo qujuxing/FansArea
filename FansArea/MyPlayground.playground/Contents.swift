@@ -1,7 +1,10 @@
 //: Playground - noun: a place where people can play
 
 import UIKit
+import MapKit
 
+
+/*
 var areas = [
     "闵行区莘庄镇","兰州七里河区","三明市尤溪县","西宁城西区","广州白云区","闽侯县上街镇","哈尔滨市南岗区","临汾市尧都区","成都武侯区","汕头市金平区","长沙市芙蓉区"
 ]
@@ -19,3 +22,17 @@ var visited = [Bool](repeatElement(false, count: 11))
 for i in 0..<areas.count {
     print("Area(name: \"\(areas[i])\", province: \"\(provinces[i])\", part: \"\(parts[i])\", image: \"\(areaImages[i])\", isVisited: \(visited[i]))",",")
 }
+*/
+let coder = CLGeocoder()
+var placemark : CLPlacemark?
+
+coder.geocodeAddressString("长沙市芙蓉区") { (placemarks, error) in
+    if error != nil {
+        print(error ?? "错误")
+    }
+    
+    if let ps = placemarks {
+        placemark = ps.first
+    }
+}
+placemark?.location?.coordinate
