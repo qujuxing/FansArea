@@ -12,14 +12,14 @@ class DetailTableViewController: UITableViewController {
     @IBOutlet weak var largeImageView: UIImageView!
     
     @IBOutlet weak var ratingBtn: UIButton!
-    var area : Area!
+    var area : AreaMO!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.tableView.rowHeight = 44;
         
     
-        largeImageView.image = UIImage(named: area.image)
+        largeImageView.image = UIImage(data: area.image!)
         
         tableView.backgroundColor = UIColor(white: 0.98, alpha: 1)
         tableView.tableFooterView = UIView(frame: CGRect.zero)
@@ -27,6 +27,10 @@ class DetailTableViewController: UITableViewController {
         
         tableView.estimatedRowHeight = 59
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        if let rating = area.rating {
+            self.ratingBtn.setImage(UIImage(named: rating), for: .normal)
+        }
         
         self.title = area.name
         // Uncomment the following line to preserve selection between presentations
@@ -135,6 +139,8 @@ class DetailTableViewController: UITableViewController {
         self.area.rating = rating
         self.ratingBtn.setImage(UIImage(named: rating), for: .normal)
     }
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    appDelegate.saveContext()
     }
 
 }

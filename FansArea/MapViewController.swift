@@ -11,7 +11,7 @@ import MapKit
 
 class MapViewController: UIViewController,MKMapViewDelegate {
     
-    var area : Area!
+    var area : AreaMO!
 
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
@@ -24,7 +24,7 @@ class MapViewController: UIViewController,MKMapViewDelegate {
         mapView.showsBuildings = true
         
         let coder  = CLGeocoder()
-        coder.geocodeAddressString(area.name) { (ps, error) in
+        coder.geocodeAddressString(area.name!) { (ps, error) in
             guard let  ps = ps else {
                 print(error ?? "未知错误")
                 return
@@ -58,7 +58,7 @@ class MapViewController: UIViewController,MKMapViewDelegate {
         }
         
         let leftIconView = UIImageView(frame: CGRect(x: 0, y: 0, width: 53, height: 53))
-        leftIconView.image =  UIImage(named: area.image)
+        leftIconView.image =  UIImage(data: area.image!)
         av?.leftCalloutAccessoryView = leftIconView
         
         return av

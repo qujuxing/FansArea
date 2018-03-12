@@ -7,25 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
-class AreaTableViewController: UITableViewController {
+class AreaTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
     
     
-    var areas = [
-        Area(name: "闵行区莘庄镇莘凌路285弄绿梅二邨113", province: "上海", part: "华东", image: "xinzhuang", isVisited: false) ,
-        Area(name: "兰州七里河区彭家坪路36号龚家湾", province: "甘肃", part: "西北", image: "qilihe", isVisited: false) ,
-        Area(name: "三明市尤溪县西城镇溪树头小区2栋504", province: "福建", part: "东南", image: "youxi", isVisited: false) ,
-        Area(name: "西宁城西区海湖新区文成路16号", province: "青海", part: "西北", image: "chengxi", isVisited: false) ,
-        Area(name: "广州白云区机场路3-9号怡乐商业大厦", province: "广东", part: "华南", image: "baiyun", isVisited: false) ,
-        Area(name: "闽侯县上街镇新峰阳光理想城香草天空", province: "福建", part: "东南", image: "shangjie", isVisited: false) ,
-        Area(name: "哈尔滨市南岗区王岗镇哈尔滨大街855号中海雍景熙岸6A栋", province: "黑龙江", part: "东北", image: "nangang", isVisited: false) ,
-        Area(name: "临汾市尧都区体育南街92号", province: "山西", part: "华北", image: "yaodu", isVisited: false) ,
-        Area(name: "成都武侯区玉林南路15号", province: "四川", part: "西南", image: "wuhou", isVisited: false) ,
-        Area(name: "汕头市金平区蓬洲学校路15号", province: "广东", part: "华南", image: "jinping", isVisited: false) ,
-        Area(name: "长沙市芙蓉区马王堆万家丽大道北段569号", province: "湖南", part: "华中", image: "furong", isVisited: false)
-    ]
-    
+    var areas: [AreaMO] = []
+    var fc: NSFetchedResultsController<AreaMO>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +28,70 @@ class AreaTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        fetchAlldata2()
+        
        
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+      //  fetchAllData()
+      //  tableView.reloadData()
+    }
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .delete:
+            tableView.deleteRows(at: [indexPath!], with: .automatic)
+        case .insert:
+            tableView.insertRows(at: [newIndexPath!], with: .automatic)
+        case . update:
+            tableView.reloadRows(at: [indexPath!], with: .automatic)
+        default:
+            tableView.reloadData()
+        }
+        
+        if let object = controller.fetchedObjects {
+            areas = object as! [AreaMO]
+        }
+    }
+    
+    func fetchAlldata2() {
+        let request : NSFetchRequest<AreaMO> = AreaMO.fetchRequest()
+        let sd = NSSortDescriptor(key: "name", ascending: true)
+        request.sortDescriptors = [sd]
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        fc = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        fc.delegate = self
+        
+        do {
+            try fc.performFetch()
+            if let object = fc.fetchedObjects {
+                areas = object
+            }
+        } catch  {
+            print(error)
+        }
+    }
+    
+//    func fetchAllData()  {
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        do {
+//           areas = try appDelegate.persistentContainer.viewContext.fetch(AreaMO.fetchRequest())
+//        } catch  {
+//            print(error)
+//        }
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -96,8 +147,14 @@ class AreaTableViewController: UITableViewController {
         actionShare.backgroundColor = UIColor.orange
         
         let actionDel = UITableViewRowAction(style: .destructive, title: "删除") { (_, indexPath) in
-            self.areas.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+         //   self.areas.remove(at: indexPath.row)
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            context.delete(self.fc.object(at: indexPath))
+            appDelegate.saveContext()
+            
+        //    tableView.deleteRows(at: [indexPath], with: .fade)
         }
         
         let actionTop = UITableViewRowAction(style: .default, title: "置顶") { (_, _) in
@@ -124,7 +181,7 @@ class AreaTableViewController: UITableViewController {
         cell.nameLabel.text = areas[indexPath.row].name
         cell.provinceLabel.text = areas[indexPath.row].province
         cell.partLabel.text = areas[indexPath.row].part
-        cell.thumbImageView.image = UIImage(named: areas[indexPath.row].image)
+        cell.thumbImageView.image = UIImage(data: areas[indexPath.row].image!)
         cell.thumbImageView.layer.cornerRadius = 10
         
 //        cell.accessoryType = areas[indexPath.row] ? .checkmark : .none

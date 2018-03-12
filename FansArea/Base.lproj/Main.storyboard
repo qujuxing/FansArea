@@ -108,7 +108,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="e8T-sH-K7w">
+                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="e8T-sH-K7w">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="312"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -350,17 +350,23 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6x-Cb-sLb">
+                                                <button opaque="NO" tag="8001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6x-Cb-sLb">
                                                     <rect key="frame" x="16" y="31" width="30" height="30"/>
                                                     <color key="backgroundColor" red="1" green="0.37194386730000001" blue="0.33022388479999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="是"/>
+                                                    <connections>
+                                                        <action selector="isVisitedTap:" destination="bpn-xL-xCa" eventType="touchUpInside" id="pvL-h6-FVy"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50W-LC-MA3">
+                                                <button opaque="NO" tag="8002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50W-LC-MA3">
                                                     <rect key="frame" x="54" y="31" width="30" height="30"/>
                                                     <color key="backgroundColor" red="1" green="0.37194386730000001" blue="0.33022388479999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="否"/>
+                                                    <connections>
+                                                        <action selector="isVisitedTap:" destination="bpn-xL-xCa" eventType="touchUpInside" id="8cU-z0-qps"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -386,12 +392,22 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="aZd-o0-Oc6">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="c0g-Ts-Zta" kind="unwind" unwindAction="unwindToHomeWithSegue:" id="408-q8-7AL"/>
+                                <segue destination="c0g-Ts-Zta" kind="unwind" identifier="unwindToHomeList" unwindAction="unwindToHomeWithSegue:" id="408-q8-7AL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="efl-SC-wgL">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="saveTap:" destination="bpn-xL-xCa" id="pfV-qq-26D"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="coverImageView" destination="Cyk-GI-SxH" id="UCr-mn-sql"/>
+                        <outlet property="labelVisited" destination="4c9-aM-1tp" id="d8B-rX-yVZ"/>
+                        <outlet property="tfName" destination="Ot4-Zc-1e3" id="nNQ-sW-neR"/>
+                        <outlet property="tfPart" destination="Tl4-dp-ub4" id="y7G-Ey-aWl"/>
+                        <outlet property="tfProvince" destination="EpD-gf-7Fe" id="5GZ-dL-Ufz"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QjW-0H-xRr" userLabel="First Responder" sceneMemberID="firstResponder"/>
