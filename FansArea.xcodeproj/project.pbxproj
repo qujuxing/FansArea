@@ -19,6 +19,7 @@
 		AE73EDF62054E4B200E11B82 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE73EDF52054E4B200E11B82 /* MapKit.framework */; };
 		AE73EDF82055702200E11B82 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73EDF72055702200E11B82 /* MapViewController.swift */; };
 		AEBA47DB2054459D00E28BD8 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA47DA2054459D00E28BD8 /* ReviewViewController.swift */; };
+		AEF98E6C2056161F004B40F9 /* AddAreaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF98E6B2056161F004B40F9 /* AddAreaController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +36,9 @@
 		AE58F401205269DB00AA0EDA /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		AE73EDF52054E4B200E11B82 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AE73EDF72055702200E11B82 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		AE73EDF92055849700E11B82 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		AE73EDF92055849700E11B82 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		AEBA47DA2054459D00E28BD8 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		AEF98E6B2056161F004B40F9 /* AddAreaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAreaController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				AE58F3FD20525CEC00AA0EDA /* Area.swift */,
 				AE58F3FF2052660500AA0EDA /* DetailTableViewController.swift */,
 				AE58F401205269DB00AA0EDA /* DetailTableViewCell.swift */,
+				AEF98E6B2056161F004B40F9 /* AddAreaController.swift */,
 				AE58F3E72051332F00AA0EDA /* Main.storyboard */,
 				AE58F3EA2051332F00AA0EDA /* Assets.xcassets */,
 				AE58F3EC2051332F00AA0EDA /* LaunchScreen.storyboard */,
@@ -175,6 +178,7 @@
 			files = (
 				AE58F402205269DB00AA0EDA /* DetailTableViewCell.swift in Sources */,
 				AE58F3FE20525CEC00AA0EDA /* Area.swift in Sources */,
+				AEF98E6C2056161F004B40F9 /* AddAreaController.swift in Sources */,
 				AEBA47DB2054459D00E28BD8 /* ReviewViewController.swift in Sources */,
 				AE58F4002052660500AA0EDA /* DetailTableViewController.swift in Sources */,
 				AE58F3F820516F8600AA0EDA /* CustomTableViewCell.swift in Sources */,
