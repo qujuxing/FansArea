@@ -68,7 +68,7 @@ class AreaTableViewController: UITableViewController, NSFetchedResultsController
         if defaults.bool(forKey: "guiderShow") {
             return
         }
-        
+       // let aboutSB = UIStoryboard(name: "about", bundle: Bundle.main)
         if let pageVC = storyboard?.instantiateViewController(withIdentifier: "GuideController") as? GuiderViewController{
             present(pageVC, animated: true, completion: nil)
         }

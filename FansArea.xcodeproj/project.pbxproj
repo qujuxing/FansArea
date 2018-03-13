@@ -20,6 +20,8 @@
 		AE73EDF82055702200E11B82 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73EDF72055702200E11B82 /* MapViewController.swift */; };
 		AEA6EA892057C2D20086E92B /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6EA882057C2D20086E92B /* ContentViewController.swift */; };
 		AEA6EA8B2057C4C90086E92B /* GuiderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6EA8A2057C4C90086E92B /* GuiderViewController.swift */; };
+		AEA6EA8E205809920086E92B /* about.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEA6EA8C205809920086E92B /* about.storyboard */; };
+		AEA6EA90205809E20086E92B /* discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEA6EA8F205809E20086E92B /* discover.storyboard */; };
 		AEABF179205677E500497A2A /* FansArea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AEABF17620563E7A00497A2A /* FansArea.xcdatamodeld */; };
 		AEBA47DB2054459D00E28BD8 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA47DA2054459D00E28BD8 /* ReviewViewController.swift */; };
 		AEF98E6C2056161F004B40F9 /* AddAreaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF98E6B2056161F004B40F9 /* AddAreaController.swift */; };
@@ -42,6 +44,8 @@
 		AE73EDF92055849700E11B82 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		AEA6EA882057C2D20086E92B /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		AEA6EA8A2057C4C90086E92B /* GuiderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiderViewController.swift; sourceTree = "<group>"; };
+		AEA6EA8D205809920086E92B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FansArea/Base.lproj/about.storyboard; sourceTree = "<group>"; };
+		AEA6EA8F205809E20086E92B /* discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = discover.storyboard; sourceTree = "<group>"; };
 		AEABF17720563E7A00497A2A /* FansArea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FansArea.xcdatamodel; sourceTree = "<group>"; };
 		AEBA47DA2054459D00E28BD8 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		AEF98E6B2056161F004B40F9 /* AddAreaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAreaController.swift; sourceTree = "<group>"; };
@@ -81,6 +85,9 @@
 			children = (
 				AE58F3E32051332F00AA0EDA /* AppDelegate.swift */,
 				AE58F3F52051366600AA0EDA /* AreaTableViewController.swift */,
+				AE58F3E72051332F00AA0EDA /* Main.storyboard */,
+				AEA6EA8F205809E20086E92B /* discover.storyboard */,
+				AEA6EA8C205809920086E92B /* about.storyboard */,
 				AE58F3F720516F8600AA0EDA /* CustomTableViewCell.swift */,
 				AEBA47DA2054459D00E28BD8 /* ReviewViewController.swift */,
 				AE73EDF72055702200E11B82 /* MapViewController.swift */,
@@ -91,7 +98,6 @@
 				AEF98E6B2056161F004B40F9 /* AddAreaController.swift */,
 				AEABF17620563E7A00497A2A /* FansArea.xcdatamodeld */,
 				AEA6EA882057C2D20086E92B /* ContentViewController.swift */,
-				AE58F3E72051332F00AA0EDA /* Main.storyboard */,
 				AEA6EA8A2057C4C90086E92B /* GuiderViewController.swift */,
 				AE58F3EA2051332F00AA0EDA /* Assets.xcassets */,
 				AE58F3EC2051332F00AA0EDA /* LaunchScreen.storyboard */,
@@ -174,6 +180,8 @@
 			files = (
 				AE58F3EE2051332F00AA0EDA /* LaunchScreen.storyboard in Resources */,
 				AE58F3EB2051332F00AA0EDA /* Assets.xcassets in Resources */,
+				AEA6EA90205809E20086E92B /* discover.storyboard in Resources */,
+				AEA6EA8E205809920086E92B /* about.storyboard in Resources */,
 				AE58F3E92051332F00AA0EDA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +225,14 @@
 				AE58F3ED2051332F00AA0EDA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AEA6EA8C205809920086E92B /* about.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEA6EA8D205809920086E92B /* Base */,
+			);
+			name = about.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
