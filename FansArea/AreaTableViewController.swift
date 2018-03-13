@@ -22,13 +22,16 @@ class AreaTableViewController: UITableViewController, NSFetchedResultsController
     
     func searchFilter(text: String)  {
         searchResults = areas.filter({ (area) -> Bool in
-            return area.name!.localizedCaseInsensitiveContains(text)
+            return area.name!.localizedCaseInsensitiveContains(text) ||
+            area.part!.localizedCaseInsensitiveContains(text) ||
+            area.province!.localizedCaseInsensitiveContains(text)
+            
         })
     }
     
     func updateSearchResults(for searchController: UISearchController) {
-        if var text = searchController.searchBar.text {
-            text = text.trimmingCharacters(in: .whitespaces)
+        if let text = searchController.searchBar.text {
+//            text = text.trimmingCharacters(in: .whitespaces)
             searchFilter(text: text)
             tableView.reloadData()
         }
@@ -265,6 +268,43 @@ class AreaTableViewController: UITableViewController, NSFetchedResultsController
     @IBAction func unwindToHome(segue: UIStoryboardSegue) {
         
     }
-    
 
+}
+
+extension String {
+//    func isIncludeChinese() -> Bool {
+//        for ch in self.unicodeScalars {
+//            if (0x4e00 < ch.value && ch.value < 0x9fff) {
+//                return true
+//            }
+//        }
+//        return false
+//    }
+    
+    func transformToPinYin() -> String {
+        let stringRef = NSMutableString(string: self) as CFMutableString
+        CFStringTransform(stringRef, nil, kCFStringTransformToLatin, false)
+        CFStringTransform(stringRef, nil, kCFStringTransformStripCombiningMarks, false)
+        let pinyin = stringRef as String
+        return pinyin
+    }
+    
+    func transformToPinyinWithoutBlank() -> String {
+        var pinyin = self.transformToPinYin()
+        pinyin = pinyin.replacingOccurrences(of: " ", with: "")
+        return pinyin
+    }
+    
+    func getPinyinHead() -> String {
+        let pinyin = self.transformToPinYin().localizedCapitalized
+        var headPinyinStr = ""
+        
+        for ch in pinyin.description {
+            if ch <= "Z" && ch >= "A" {
+                headPinyinStr.append(ch)
+            }
+        }
+        return headPinyinStr
+    }
+    
 }
