@@ -569,7 +569,7 @@
         <!--Navigation Controller-->
         <scene sceneID="6To-pw-0zQ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="rLP-Xd-LbI" sceneMemberID="viewController">
+                <navigationController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="rLP-Xd-LbI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="MtZ-c4-2tS">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>

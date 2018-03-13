@@ -9,15 +9,38 @@
 import UIKit
 import CoreData
 
-class AreaTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class AreaTableViewController: UITableViewController, NSFetchedResultsControllerDelegate,UISearchResultsUpdating{
     
     
     
     var areas: [AreaMO] = []
     var fc: NSFetchedResultsController<AreaMO>!
     
+    var  sc : UISearchController!
+    
+    var searchResults : [AreaMO] = []
+    
+    func searchFilter(text: String)  {
+        searchResults = areas.filter({ (area) -> Bool in
+            return area.name!.localizedCaseInsensitiveContains(text)
+        })
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        if var text = searchController.searchBar.text {
+            text = text.trimmingCharacters(in: .whitespaces)
+            searchFilter(text: text)
+            tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        sc = UISearchController(searchResultsController: nil)
+        sc.searchResultsUpdater = self
+        tableView.tableHeaderView = sc.searchBar
+        sc.dimsBackgroundDuringPresentation = false
         
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -171,17 +194,19 @@ class AreaTableViewController: UITableViewController, NSFetchedResultsController
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return areas.count
+        return  sc.isActive ? searchResults.count : areas.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
+        
+        let area = sc.isActive ? searchResults[indexPath.row] : areas[indexPath.row]
 
-        cell.nameLabel.text = areas[indexPath.row].name
-        cell.provinceLabel.text = areas[indexPath.row].province
-        cell.partLabel.text = areas[indexPath.row].part
-        cell.thumbImageView.image = UIImage(data: areas[indexPath.row].image!)
+        cell.nameLabel.text = area.name
+        cell.provinceLabel.text = area.province
+        cell.partLabel.text = area.part
+        cell.thumbImageView.image = UIImage(data: area.image!)
         cell.thumbImageView.layer.cornerRadius = 10
         
 //        cell.accessoryType = areas[indexPath.row] ? .checkmark : .none
@@ -190,13 +215,13 @@ class AreaTableViewController: UITableViewController, NSFetchedResultsController
     }
     
 
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
-        return true
+        return !sc.isActive
     }
-    */
+ 
 
    
     // Override to support editing the table view.
@@ -233,7 +258,7 @@ class AreaTableViewController: UITableViewController, NSFetchedResultsController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showAreaDetail" {
             let dest = segue.destination as! DetailTableViewController
-            dest.area = areas[tableView.indexPathForSelectedRow!.row]
+            dest.area = sc.isActive ?  searchResults[tableView.indexPathForSelectedRow!.row]   : areas[tableView.indexPathForSelectedRow!.row]
         }
     }
     
