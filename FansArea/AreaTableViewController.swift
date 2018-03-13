@@ -63,6 +63,15 @@ class AreaTableViewController: UITableViewController, NSFetchedResultsController
         super.viewDidAppear(animated)
       //  fetchAllData()
       //  tableView.reloadData()
+        
+        let defaults = UserDefaults.standard
+        if defaults.bool(forKey: "guiderShow") {
+            return
+        }
+        
+        if let pageVC = storyboard?.instantiateViewController(withIdentifier: "GuideController") as? GuiderViewController{
+            present(pageVC, animated: true, completion: nil)
+        }
     }
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {

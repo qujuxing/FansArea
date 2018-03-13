@@ -566,6 +566,14 @@
             </objects>
             <point key="canvasLocation" x="3424.8000000000002" y="546.79802955665025"/>
         </scene>
+        <!--Guider View Controller-->
+        <scene sceneID="FpC-Lb-oTW">
+            <objects>
+                <pageViewController storyboardIdentifier="GuideController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="cWl-GO-CQO" customClass="GuiderViewController" customModule="FansArea" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xBt-qt-4Ae" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281" y="1275"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="6To-pw-0zQ">
             <objects>
@@ -589,6 +597,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5RI-HS-che" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="594" y="547"/>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="jWp-L1-VRr">
+            <objects>
+                <viewController storyboardIdentifier="ContentController" id="X2L-rP-T1D" customClass="ContentViewController" customModule="FansArea" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1au-im-x9U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swift3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNG-Qt-vMv">
+                                <rect key="frame" x="151.33333333333334" y="44" width="72.666666666666657" height="31.333333333333329"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u5J-bE-TNi">
+                                <rect key="frame" x="-0.66666666666665719" y="162.33333333333334" width="375.33333333333326" height="487.33333333333326"/>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="j27-Ga-yJ9">
+                                <rect key="frame" x="168" y="770" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbA-zP-cv3">
+                                <rect key="frame" x="156" y="685.66666666666663" width="62" height="30"/>
+                                <state key="normal" title="立即体验"/>
+                                <connections>
+                                    <action selector="doneBtnTap:" destination="X2L-rP-T1D" eventType="touchUpInside" id="5MB-5C-e1x"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swift3.1语法适配，超人一步" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfz-BN-CXw">
+                                <rect key="frame" x="79.666666666666686" y="717.66666666666663" width="216" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="u5J-bE-TNi" firstAttribute="width" secondItem="1au-im-x9U" secondAttribute="width" id="7Mo-mB-iwD"/>
+                            <constraint firstItem="UbA-zP-cv3" firstAttribute="centerX" secondItem="1au-im-x9U" secondAttribute="centerX" id="Awk-Vb-Vbh"/>
+                            <constraint firstItem="u5J-bE-TNi" firstAttribute="centerX" secondItem="1au-im-x9U" secondAttribute="centerX" id="CAF-Sv-5xi"/>
+                            <constraint firstItem="j27-Ga-yJ9" firstAttribute="centerX" secondItem="1au-im-x9U" secondAttribute="centerX" id="Cq3-GT-2Ic"/>
+                            <constraint firstItem="Fna-ZB-yhM" firstAttribute="bottom" secondItem="bfz-BN-CXw" secondAttribute="bottom" constant="40" id="QGt-ld-47t"/>
+                            <constraint firstItem="u5J-bE-TNi" firstAttribute="centerY" secondItem="1au-im-x9U" secondAttribute="centerY" id="UsO-HN-EsS"/>
+                            <constraint firstItem="bfz-BN-CXw" firstAttribute="centerX" secondItem="1au-im-x9U" secondAttribute="centerX" id="Xvp-QI-ntn"/>
+                            <constraint firstItem="gNG-Qt-vMv" firstAttribute="centerX" secondItem="1au-im-x9U" secondAttribute="centerX" id="b6g-Zn-eAN"/>
+                            <constraint firstItem="u5J-bE-TNi" firstAttribute="height" secondItem="1au-im-x9U" secondAttribute="height" multiplier="0.6" id="lD0-lb-L0G"/>
+                            <constraint firstAttribute="bottom" secondItem="j27-Ga-yJ9" secondAttribute="bottom" constant="5" id="oj9-BG-eMR"/>
+                            <constraint firstItem="bfz-BN-CXw" firstAttribute="top" secondItem="UbA-zP-cv3" secondAttribute="bottom" constant="2" id="rId-U8-FJc"/>
+                            <constraint firstItem="gNG-Qt-vMv" firstAttribute="top" secondItem="Fna-ZB-yhM" secondAttribute="top" id="xvg-5e-Evf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fna-ZB-yhM"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnDone" destination="UbA-zP-cv3" id="2qo-nV-utJ"/>
+                        <outlet property="imageView" destination="u5J-bE-TNi" id="dvH-bI-abG"/>
+                        <outlet property="labelFooter" destination="bfz-BN-CXw" id="3PH-S7-dAK"/>
+                        <outlet property="labelHeading" destination="gNG-Qt-vMv" id="oJP-uh-E33"/>
+                        <outlet property="pageControl" destination="j27-Ga-yJ9" id="TGa-pG-wss"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nfq-np-tOe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="501.60000000000002" y="1274.6305418719212"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XJK-nL-8wA">
