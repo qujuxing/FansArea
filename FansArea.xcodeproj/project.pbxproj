@@ -18,6 +18,8 @@
 		AE58F402205269DB00AA0EDA /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE58F401205269DB00AA0EDA /* DetailTableViewCell.swift */; };
 		AE73EDF62054E4B200E11B82 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE73EDF52054E4B200E11B82 /* MapKit.framework */; };
 		AE73EDF82055702200E11B82 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73EDF72055702200E11B82 /* MapViewController.swift */; };
+		AE83D97C2058204800B6BCB9 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83D97B2058204800B6BCB9 /* AboutTableViewController.swift */; };
+		AE83D9802058344000B6BCB9 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83D97F2058344000B6BCB9 /* WebViewController.swift */; };
 		AEA6EA892057C2D20086E92B /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6EA882057C2D20086E92B /* ContentViewController.swift */; };
 		AEA6EA8B2057C4C90086E92B /* GuiderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6EA8A2057C4C90086E92B /* GuiderViewController.swift */; };
 		AEA6EA8E205809920086E92B /* about.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEA6EA8C205809920086E92B /* about.storyboard */; };
@@ -42,6 +44,8 @@
 		AE73EDF52054E4B200E11B82 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AE73EDF72055702200E11B82 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AE73EDF92055849700E11B82 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		AE83D97B2058204800B6BCB9 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
+		AE83D97F2058344000B6BCB9 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		AEA6EA882057C2D20086E92B /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		AEA6EA8A2057C4C90086E92B /* GuiderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiderViewController.swift; sourceTree = "<group>"; };
 		AEA6EA8D205809920086E92B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FansArea/Base.lproj/about.storyboard; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 				AE58F3E72051332F00AA0EDA /* Main.storyboard */,
 				AEA6EA8F205809E20086E92B /* discover.storyboard */,
 				AEA6EA8C205809920086E92B /* about.storyboard */,
+				AE83D97F2058344000B6BCB9 /* WebViewController.swift */,
+				AE83D97B2058204800B6BCB9 /* AboutTableViewController.swift */,
 				AE58F3F720516F8600AA0EDA /* CustomTableViewCell.swift */,
 				AEBA47DA2054459D00E28BD8 /* ReviewViewController.swift */,
 				AE73EDF72055702200E11B82 /* MapViewController.swift */,
@@ -194,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE58F402205269DB00AA0EDA /* DetailTableViewCell.swift in Sources */,
+				AE83D97C2058204800B6BCB9 /* AboutTableViewController.swift in Sources */,
 				AE58F3FE20525CEC00AA0EDA /* Area.swift in Sources */,
 				AEF98E6C2056161F004B40F9 /* AddAreaController.swift in Sources */,
 				AEBA47DB2054459D00E28BD8 /* ReviewViewController.swift in Sources */,
@@ -203,6 +210,7 @@
 				AEABF179205677E500497A2A /* FansArea.xcdatamodeld in Sources */,
 				AE58F3F62051366600AA0EDA /* AreaTableViewController.swift in Sources */,
 				AEA6EA892057C2D20086E92B /* ContentViewController.swift in Sources */,
+				AE83D9802058344000B6BCB9 /* WebViewController.swift in Sources */,
 				AE58F3E42051332F00AA0EDA /* AppDelegate.swift in Sources */,
 				AE73EDF82055702200E11B82 /* MapViewController.swift in Sources */,
 			);
