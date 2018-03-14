@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -23,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        // UITabBar.appearance().tintColor = UIColor(red: 242/255, green: 116/255, blue: 119/255, alpha: 1)
         UITabBar.appearance().selectionIndicatorImage = #imageLiteral(resourceName: "tabitem-selected")
         UITabBar.appearance().barTintColor = UIColor.white
+        
+        AVOSCloud.setApplicationId("Y7cdGDyOWxG7DN2Di2d3EYIr-gzGzoHsz", clientKey: "BgtFoS90NxAfaSPvXbLTtvaB")
         
         return true
     }

@@ -27,9 +27,14 @@
 		AEABF179205677E500497A2A /* FansArea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AEABF17620563E7A00497A2A /* FansArea.xcdatamodeld */; };
 		AEBA47DB2054459D00E28BD8 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA47DA2054459D00E28BD8 /* ReviewViewController.swift */; };
 		AEF98E6C2056161F004B40F9 /* AddAreaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF98E6B2056161F004B40F9 /* AddAreaController.swift */; };
+		AEFF869120591083003E94AF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AEFF869020591083003E94AF /* Podfile */; };
+		AEFF869620594B98003E94AF /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFF869520594B98003E94AF /* DiscoverTableViewController.swift */; };
+		C902AF7B4A8649ABFA500C91 /* libPods-FansArea.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B053DA2DF7BBFFF3CC11DC1 /* libPods-FansArea.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55A1495F0734F645D92963B7 /* Pods-FansArea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FansArea.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FansArea/Pods-FansArea.debug.xcconfig"; sourceTree = "<group>"; };
+		9B053DA2DF7BBFFF3CC11DC1 /* libPods-FansArea.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FansArea.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE58F3E02051332E00AA0EDA /* FansArea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FansArea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE58F3E32051332F00AA0EDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE58F3E82051332F00AA0EDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +58,10 @@
 		AEABF17720563E7A00497A2A /* FansArea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FansArea.xcdatamodel; sourceTree = "<group>"; };
 		AEBA47DA2054459D00E28BD8 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		AEF98E6B2056161F004B40F9 /* AddAreaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAreaController.swift; sourceTree = "<group>"; };
+		AEFF869020591083003E94AF /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AEFF869220591252003E94AF /* FansArea-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FansArea-Bridging-Header.h"; sourceTree = "<group>"; };
+		AEFF869520594B98003E94AF /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
+		CCE10E2C250E2A4401AA1B71 /* Pods-FansArea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FansArea.release.xcconfig"; path = "Pods/Target Support Files/Pods-FansArea/Pods-FansArea.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,18 +70,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE73EDF62054E4B200E11B82 /* MapKit.framework in Frameworks */,
+				C902AF7B4A8649ABFA500C91 /* libPods-FansArea.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1795F8B260BD33E7E2743401 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55A1495F0734F645D92963B7 /* Pods-FansArea.debug.xcconfig */,
+				CCE10E2C250E2A4401AA1B71 /* Pods-FansArea.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AE58F3D72051332E00AA0EDA = {
 			isa = PBXGroup;
 			children = (
+				AEFF869020591083003E94AF /* Podfile */,
 				AE58F3E22051332E00AA0EDA /* FansArea */,
 				AE58F3E12051332E00AA0EDA /* Products */,
 				AE73EDF42054E4B200E11B82 /* Frameworks */,
+				1795F8B260BD33E7E2743401 /* Pods */,
+				AEFF869220591252003E94AF /* FansArea-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +113,7 @@
 				AE58F3F52051366600AA0EDA /* AreaTableViewController.swift */,
 				AE58F3E72051332F00AA0EDA /* Main.storyboard */,
 				AEA6EA8F205809E20086E92B /* discover.storyboard */,
+				AEFF869520594B98003E94AF /* DiscoverTableViewController.swift */,
 				AEA6EA8C205809920086E92B /* about.storyboard */,
 				AE83D97F2058344000B6BCB9 /* WebViewController.swift */,
 				AE83D97B2058204800B6BCB9 /* AboutTableViewController.swift */,
@@ -116,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				AE73EDF52054E4B200E11B82 /* MapKit.framework */,
+				9B053DA2DF7BBFFF3CC11DC1 /* libPods-FansArea.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -127,9 +151,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE58F3F22051332F00AA0EDA /* Build configuration list for PBXNativeTarget "FansArea" */;
 			buildPhases = (
+				3E4A8FD215E3D6C39A646203 /* [CP] Check Pods Manifest.lock */,
 				AE58F3DC2051332E00AA0EDA /* Sources */,
 				AE58F3DD2051332E00AA0EDA /* Frameworks */,
 				AE58F3DE2051332E00AA0EDA /* Resources */,
+				C26ABCBF6E4EF631434DEAD5 /* [CP] Embed Pods Frameworks */,
+				8BF90D9FE99CE46C261CFC42 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +179,7 @@
 				TargetAttributes = {
 					AE58F3DF2051332E00AA0EDA = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -184,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEFF869120591083003E94AF /* Podfile in Resources */,
 				AE58F3EE2051332F00AA0EDA /* LaunchScreen.storyboard in Resources */,
 				AE58F3EB2051332F00AA0EDA /* Assets.xcassets in Resources */,
 				AEA6EA90205809E20086E92B /* discover.storyboard in Resources */,
@@ -193,6 +222,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E4A8FD215E3D6C39A646203 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FansArea-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BF90D9FE99CE46C261CFC42 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FansArea/Pods-FansArea-resources.sh",
+				"${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FansArea/Pods-FansArea-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C26ABCBF6E4EF631434DEAD5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FansArea/Pods-FansArea-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AE58F3DC2051332E00AA0EDA /* Sources */ = {
@@ -212,6 +295,7 @@
 				AEA6EA892057C2D20086E92B /* ContentViewController.swift in Sources */,
 				AE83D9802058344000B6BCB9 /* WebViewController.swift in Sources */,
 				AE58F3E42051332F00AA0EDA /* AppDelegate.swift in Sources */,
+				AEFF869620594B98003E94AF /* DiscoverTableViewController.swift in Sources */,
 				AE73EDF82055702200E11B82 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,13 +439,17 @@
 		};
 		AE58F3F32051332F00AA0EDA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55A1495F0734F645D92963B7 /* Pods-FansArea.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FansArea/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.minmin.FansArea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FansArea-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -369,13 +457,16 @@
 		};
 		AE58F3F42051332F00AA0EDA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCE10E2C250E2A4401AA1B71 /* Pods-FansArea.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FansArea/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.minmin.FansArea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FansArea-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

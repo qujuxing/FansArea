@@ -26,9 +26,31 @@ class AddAreaController: UITableViewController, UIImagePickerControllerDelegate,
         }
         print("正在保存")
         appDelegate.saveContext()
-        
+        saveToCloud(area: area)
         performSegue(withIdentifier: "unwindToHomeList", sender: self)
     }
+    
+    func saveToCloud(area: AreaMO)  {
+        let cloudObject = AVObject(className: "Area")
+        cloudObject["name"] = area.name!
+        cloudObject["province"] = area.province!
+        cloudObject["part"] = area.part!
+        cloudObject["isVisted"] = area.isVisited
+        
+        let originImg = UIImage(data: (area.image)!)!
+        let factor = (originImg.size.width > 1024) ? ( 1024 / originImg.size.width) : 1
+        let scaledImg = UIImage(data: (area.image)! , scale: factor)!
+        let imgFile = AVFile(name:" \(area.name!).jpg", data: UIImageJPEGRepresentation(scaledImg, 0.7)!)
+        cloudObject["image"] = imgFile
+        cloudObject.saveInBackground { (succeed, error) in
+            if succeed {
+                print("云端保存成功")
+            } else {
+                print(error ?? "云端保存未知错误")
+            }
+        }
+        
+      }
     
     @IBOutlet weak var labelVisited: UILabel!
     @IBAction func isVisitedTap(_ sender: UIButton) {
