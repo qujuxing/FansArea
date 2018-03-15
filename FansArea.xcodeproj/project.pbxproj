@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7837EBC498997BA4E3F17181 /* libPods-FansAreaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1F0AC90551ADEADA0795F0 /* libPods-FansAreaTests.a */; };
+		AE48DE57205A5C480045D78E /* FansAreaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48DE56205A5C480045D78E /* FansAreaTests.swift */; };
 		AE58F3E42051332F00AA0EDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE58F3E32051332F00AA0EDA /* AppDelegate.swift */; };
 		AE58F3E92051332F00AA0EDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE58F3E72051332F00AA0EDA /* Main.storyboard */; };
 		AE58F3EB2051332F00AA0EDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE58F3EA2051332F00AA0EDA /* Assets.xcassets */; };
@@ -34,9 +36,24 @@
 		C902AF7B4A8649ABFA500C91 /* libPods-FansArea.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B053DA2DF7BBFFF3CC11DC1 /* libPods-FansArea.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AE48DE59205A5C480045D78E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE58F3D82051332E00AA0EDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE58F3DF2051332E00AA0EDA;
+			remoteInfo = FansArea;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		242C55857EB60B1C1D8C6D22 /* Pods-FansAreaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FansAreaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FansAreaTests/Pods-FansAreaTests.release.xcconfig"; sourceTree = "<group>"; };
+		3DB4FB732CF3BA401B32AC37 /* Pods-FansAreaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FansAreaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FansAreaTests/Pods-FansAreaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		55A1495F0734F645D92963B7 /* Pods-FansArea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FansArea.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FansArea/Pods-FansArea.debug.xcconfig"; sourceTree = "<group>"; };
 		9B053DA2DF7BBFFF3CC11DC1 /* libPods-FansArea.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FansArea.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE48DE54205A5C480045D78E /* FansAreaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FansAreaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE48DE56205A5C480045D78E /* FansAreaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FansAreaTests.swift; sourceTree = "<group>"; };
+		AE48DE58205A5C480045D78E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE58F3E02051332E00AA0EDA /* FansArea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FansArea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE58F3E32051332F00AA0EDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE58F3E82051332F00AA0EDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,14 +85,23 @@
 		AEFF869A205A27B5003E94AF /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		AEFF869B205A27B5003E94AF /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = FansArea/ja.lproj/about.strings; sourceTree = "<group>"; };
 		AEFF869C205A27B5003E94AF /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		AEFF86A0205A43EE003E94AF /* zh-Hans */ = {isa = PBXFileReference; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		AEFF86A5205A43EF003E94AF /* zh-Hans */ = {isa = PBXFileReference; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		AEFF86A0205A43EE003E94AF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		AEFF86A5205A43EF003E94AF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		AEFF86A8205A4470003E94AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/discover.storyboard; sourceTree = "<group>"; };
 		AEFF86AB205A4477003E94AF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/discover.strings"; sourceTree = "<group>"; };
 		CCE10E2C250E2A4401AA1B71 /* Pods-FansArea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FansArea.release.xcconfig"; path = "Pods/Target Support Files/Pods-FansArea/Pods-FansArea.release.xcconfig"; sourceTree = "<group>"; };
+		EA1F0AC90551ADEADA0795F0 /* libPods-FansAreaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FansAreaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AE48DE51205A5C480045D78E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7837EBC498997BA4E3F17181 /* libPods-FansAreaTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AE58F3DD2051332E00AA0EDA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -93,8 +119,19 @@
 			children = (
 				55A1495F0734F645D92963B7 /* Pods-FansArea.debug.xcconfig */,
 				CCE10E2C250E2A4401AA1B71 /* Pods-FansArea.release.xcconfig */,
+				3DB4FB732CF3BA401B32AC37 /* Pods-FansAreaTests.debug.xcconfig */,
+				242C55857EB60B1C1D8C6D22 /* Pods-FansAreaTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		AE48DE55205A5C480045D78E /* FansAreaTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE48DE56205A5C480045D78E /* FansAreaTests.swift */,
+				AE48DE58205A5C480045D78E /* Info.plist */,
+			);
+			path = FansAreaTests;
 			sourceTree = "<group>";
 		};
 		AE58F3D72051332E00AA0EDA = {
@@ -102,6 +139,7 @@
 			children = (
 				AEFF869020591083003E94AF /* Podfile */,
 				AE58F3E22051332E00AA0EDA /* FansArea */,
+				AE48DE55205A5C480045D78E /* FansAreaTests */,
 				AE58F3E12051332E00AA0EDA /* Products */,
 				AE73EDF42054E4B200E11B82 /* Frameworks */,
 				1795F8B260BD33E7E2743401 /* Pods */,
@@ -113,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				AE58F3E02051332E00AA0EDA /* FansArea.app */,
+				AE48DE54205A5C480045D78E /* FansAreaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,6 +192,7 @@
 			children = (
 				AE73EDF52054E4B200E11B82 /* MapKit.framework */,
 				9B053DA2DF7BBFFF3CC11DC1 /* libPods-FansArea.a */,
+				EA1F0AC90551ADEADA0795F0 /* libPods-FansAreaTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -160,6 +200,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AE48DE53205A5C480045D78E /* FansAreaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE48DE5D205A5C480045D78E /* Build configuration list for PBXNativeTarget "FansAreaTests" */;
+			buildPhases = (
+				EAEDA5E96C49C3D226260A5A /* [CP] Check Pods Manifest.lock */,
+				AE48DE50205A5C480045D78E /* Sources */,
+				AE48DE51205A5C480045D78E /* Frameworks */,
+				AE48DE52205A5C480045D78E /* Resources */,
+				816B62ED0D05519EAA405E82 /* [CP] Embed Pods Frameworks */,
+				EAB692808CA16FE9A7570D10 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE48DE5A205A5C480045D78E /* PBXTargetDependency */,
+			);
+			name = FansAreaTests;
+			productName = FansAreaTests;
+			productReference = AE48DE54205A5C480045D78E /* FansAreaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		AE58F3DF2051332E00AA0EDA /* FansArea */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE58F3F22051332F00AA0EDA /* Build configuration list for PBXNativeTarget "FansArea" */;
@@ -190,6 +251,11 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "瞿炬星";
 				TargetAttributes = {
+					AE48DE53205A5C480045D78E = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AE58F3DF2051332E00AA0EDA;
+					};
 					AE58F3DF2051332E00AA0EDA = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
@@ -217,11 +283,19 @@
 			projectRoot = "";
 			targets = (
 				AE58F3DF2051332E00AA0EDA /* FansArea */,
+				AE48DE53205A5C480045D78E /* FansAreaTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AE48DE52205A5C480045D78E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AE58F3DE2051332E00AA0EDA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,6 +332,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		816B62ED0D05519EAA405E82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FansAreaTests/Pods-FansAreaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8BF90D9FE99CE46C261CFC42 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -269,7 +358,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AVOSCloud_Art.inc",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -291,9 +380,53 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FansArea/Pods-FansArea-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EAB692808CA16FE9A7570D10 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FansAreaTests/Pods-FansAreaTests-resources.sh",
+				"${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AVOSCloud_Art.inc",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FansAreaTests/Pods-FansAreaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAEDA5E96C49C3D226260A5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FansAreaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AE48DE50205A5C480045D78E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE48DE57205A5C480045D78E /* FansAreaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AE58F3DC2051332E00AA0EDA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,6 +450,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE48DE5A205A5C480045D78E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE58F3DF2051332E00AA0EDA /* FansArea */;
+			targetProxy = AE48DE59205A5C480045D78E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AE58F3E72051332F00AA0EDA /* Main.storyboard */ = {
@@ -377,6 +518,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AE48DE5B205A5C480045D78E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DB4FB732CF3BA401B32AC37 /* Pods-FansAreaTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FansAreaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.minmin.FansAreaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FansArea-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FansArea.app/FansArea";
+			};
+			name = Debug;
+		};
+		AE48DE5C205A5C480045D78E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 242C55857EB60B1C1D8C6D22 /* Pods-FansAreaTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FansAreaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.minmin.FansAreaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FansArea-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FansArea.app/FansArea";
+			};
+			name = Release;
+		};
 		AE58F3F02051332F00AA0EDA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -524,6 +699,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AE48DE5D205A5C480045D78E /* Build configuration list for PBXNativeTarget "FansAreaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE48DE5B205A5C480045D78E /* Debug */,
+				AE48DE5C205A5C480045D78E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AE58F3DB2051332E00AA0EDA /* Build configuration list for PBXProject "FansArea" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
