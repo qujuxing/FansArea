@@ -23,12 +23,14 @@
 		AEA6EA892057C2D20086E92B /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6EA882057C2D20086E92B /* ContentViewController.swift */; };
 		AEA6EA8B2057C4C90086E92B /* GuiderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6EA8A2057C4C90086E92B /* GuiderViewController.swift */; };
 		AEA6EA8E205809920086E92B /* about.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEA6EA8C205809920086E92B /* about.storyboard */; };
-		AEA6EA90205809E20086E92B /* discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEA6EA8F205809E20086E92B /* discover.storyboard */; };
 		AEABF179205677E500497A2A /* FansArea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AEABF17620563E7A00497A2A /* FansArea.xcdatamodeld */; };
 		AEBA47DB2054459D00E28BD8 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA47DA2054459D00E28BD8 /* ReviewViewController.swift */; };
 		AEF98E6C2056161F004B40F9 /* AddAreaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF98E6B2056161F004B40F9 /* AddAreaController.swift */; };
 		AEFF869120591083003E94AF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AEFF869020591083003E94AF /* Podfile */; };
 		AEFF869620594B98003E94AF /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFF869520594B98003E94AF /* DiscoverTableViewController.swift */; };
+		AEFF869F205A43EE003E94AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEFF86A1205A43EE003E94AF /* InfoPlist.strings */; };
+		AEFF86A4205A43EF003E94AF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEFF86A6205A43EF003E94AF /* Localizable.strings */; };
+		AEFF86A7205A4470003E94AF /* discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEFF86A9205A4470003E94AF /* discover.storyboard */; };
 		C902AF7B4A8649ABFA500C91 /* libPods-FansArea.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B053DA2DF7BBFFF3CC11DC1 /* libPods-FansArea.a */; };
 /* End PBXBuildFile section */
 
@@ -54,13 +56,22 @@
 		AEA6EA882057C2D20086E92B /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		AEA6EA8A2057C4C90086E92B /* GuiderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiderViewController.swift; sourceTree = "<group>"; };
 		AEA6EA8D205809920086E92B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FansArea/Base.lproj/about.storyboard; sourceTree = "<group>"; };
-		AEA6EA8F205809E20086E92B /* discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = discover.storyboard; sourceTree = "<group>"; };
 		AEABF17720563E7A00497A2A /* FansArea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FansArea.xcdatamodel; sourceTree = "<group>"; };
 		AEBA47DA2054459D00E28BD8 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		AEF98E6B2056161F004B40F9 /* AddAreaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAreaController.swift; sourceTree = "<group>"; };
 		AEFF869020591083003E94AF /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AEFF869220591252003E94AF /* FansArea-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FansArea-Bridging-Header.h"; sourceTree = "<group>"; };
 		AEFF869520594B98003E94AF /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
+		AEFF8697205A27AC003E94AF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		AEFF8698205A27AC003E94AF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "FansArea/zh-Hans.lproj/about.strings"; sourceTree = "<group>"; };
+		AEFF8699205A27AD003E94AF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		AEFF869A205A27B5003E94AF /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		AEFF869B205A27B5003E94AF /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = FansArea/ja.lproj/about.strings; sourceTree = "<group>"; };
+		AEFF869C205A27B5003E94AF /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		AEFF86A0205A43EE003E94AF /* zh-Hans */ = {isa = PBXFileReference; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		AEFF86A5205A43EF003E94AF /* zh-Hans */ = {isa = PBXFileReference; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		AEFF86A8205A4470003E94AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/discover.storyboard; sourceTree = "<group>"; };
+		AEFF86AB205A4477003E94AF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/discover.strings"; sourceTree = "<group>"; };
 		CCE10E2C250E2A4401AA1B71 /* Pods-FansArea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FansArea.release.xcconfig"; path = "Pods/Target Support Files/Pods-FansArea/Pods-FansArea.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,10 +120,12 @@
 		AE58F3E22051332E00AA0EDA /* FansArea */ = {
 			isa = PBXGroup;
 			children = (
+				AEFF86A6205A43EF003E94AF /* Localizable.strings */,
+				AEFF86A1205A43EE003E94AF /* InfoPlist.strings */,
 				AE58F3E32051332F00AA0EDA /* AppDelegate.swift */,
 				AE58F3F52051366600AA0EDA /* AreaTableViewController.swift */,
 				AE58F3E72051332F00AA0EDA /* Main.storyboard */,
-				AEA6EA8F205809E20086E92B /* discover.storyboard */,
+				AEFF86A9205A4470003E94AF /* discover.storyboard */,
 				AEFF869520594B98003E94AF /* DiscoverTableViewController.swift */,
 				AEA6EA8C205809920086E92B /* about.storyboard */,
 				AE83D97F2058344000B6BCB9 /* WebViewController.swift */,
@@ -196,6 +209,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = AE58F3D72051332E00AA0EDA;
 			productRefGroup = AE58F3E12051332E00AA0EDA /* Products */;
@@ -213,9 +227,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEFF869120591083003E94AF /* Podfile in Resources */,
+				AEFF869F205A43EE003E94AF /* InfoPlist.strings in Resources */,
 				AE58F3EE2051332F00AA0EDA /* LaunchScreen.storyboard in Resources */,
 				AE58F3EB2051332F00AA0EDA /* Assets.xcassets in Resources */,
-				AEA6EA90205809E20086E92B /* discover.storyboard in Resources */,
+				AEFF86A7205A4470003E94AF /* discover.storyboard in Resources */,
+				AEFF86A4205A43EF003E94AF /* Localizable.strings in Resources */,
 				AEA6EA8E205809920086E92B /* about.storyboard in Resources */,
 				AE58F3E92051332F00AA0EDA /* Main.storyboard in Resources */,
 			);
@@ -307,6 +323,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				AE58F3E82051332F00AA0EDA /* Base */,
+				AEFF8697205A27AC003E94AF /* zh-Hans */,
+				AEFF869A205A27B5003E94AF /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -315,6 +333,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				AE58F3ED2051332F00AA0EDA /* Base */,
+				AEFF8699205A27AD003E94AF /* zh-Hans */,
+				AEFF869C205A27B5003E94AF /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -323,8 +343,35 @@
 			isa = PBXVariantGroup;
 			children = (
 				AEA6EA8D205809920086E92B /* Base */,
+				AEFF8698205A27AC003E94AF /* zh-Hans */,
+				AEFF869B205A27B5003E94AF /* ja */,
 			);
 			name = about.storyboard;
+			sourceTree = "<group>";
+		};
+		AEFF86A1205A43EE003E94AF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEFF86A0205A43EE003E94AF /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AEFF86A6205A43EF003E94AF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEFF86A5205A43EF003E94AF /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		AEFF86A9205A4470003E94AF /* discover.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEFF86A8205A4470003E94AF /* Base */,
+				AEFF86AB205A4477003E94AF /* zh-Hans */,
+			);
+			name = discover.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -334,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -391,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

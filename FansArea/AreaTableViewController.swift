@@ -44,6 +44,7 @@ class AreaTableViewController: UITableViewController, NSFetchedResultsController
         sc.searchResultsUpdater = self
         tableView.tableHeaderView = sc.searchBar
         sc.dimsBackgroundDuringPresentation = false
+        sc.searchBar.placeholder = NSLocalizedString("Enter area name to search...", comment: "placeholder for search bar")
         
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -181,7 +182,8 @@ class AreaTableViewController: UITableViewController, NSFetchedResultsController
         }
         actionShare.backgroundColor = UIColor.orange
         
-        let actionDel = UITableViewRowAction(style: .destructive, title: "删除") { (_, indexPath) in
+        let actionDel = UITableViewRowAction(style: .destructive, title:
+            NSLocalizedString("Delete", bundle: Bundle(for: UIButton.classForCoder()), comment: "title for delete action")) { (_, indexPath) in
          //   self.areas.remove(at: indexPath.row)
             
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
